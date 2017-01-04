@@ -48,6 +48,8 @@ spec:
         env:
         - name: PORT
           value: "80"
+        - name: MY_BASENAME
+          value: examplephx
         - name: MY_POD_NAMESPACE
           valueFrom:
             fieldRef:
@@ -74,7 +76,7 @@ spec:
         volumeMounts:
         - name: config-volume
           mountPath: /beamconfig
-        volumes:
-        - name: config-volume
+      volumes:
+      - name: config-volume
         configMap:
           name: vm-config
