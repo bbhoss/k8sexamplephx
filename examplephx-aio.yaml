@@ -40,7 +40,7 @@ spec:
     spec:
       containers:
       - name: examplephx
-        image: gcr.io/base-154519/examplephx:latest
+        image: gcr.io/base-154519/examplephx:0.0.3
         resources:
           requests:
             cpu: 100m
