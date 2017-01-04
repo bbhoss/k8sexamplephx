@@ -64,6 +64,11 @@ spec:
           value: "true"
         - name: RELEASE_CONFIG_DIR
           value: /beamconfig
+        - name: ERLANG_COOKIE
+          valueFrom:
+            secretKeyRef:
+              name: app-config
+              key: erlang-cookie
         ports:
         - containerPort: 80
         volumeMounts:
