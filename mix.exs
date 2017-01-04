@@ -17,7 +17,7 @@ defmodule ExamplePhx.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {ExamplePhx, []},
-     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext]]
+     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext, :libcluster, :distillery]]
   end
 
   # Specifies which paths to compile per environment.
