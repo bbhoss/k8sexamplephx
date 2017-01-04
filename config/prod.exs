@@ -22,6 +22,14 @@ config :example_phx, ExamplePhx.Endpoint,
 # Do not print debug messages in production
 config :logger, level: :info
 
+config :libcluster,
+  topologies: [
+    examplephx: [
+      strategy: Cluster.Strategy.Kubernetes,
+      config: [
+        kubernetes_selector: "app=examplephx",
+        kubernetes_node_basename: "examplephx"]]]
+
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key

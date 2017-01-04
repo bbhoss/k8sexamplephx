@@ -47,6 +47,6 @@ spec:
             memory: 100Mi
         env:
         - name: PORT
-          value: 8080
+          value: "80"
         ports:
-        - containerPort: 8080
+        - containerPort: 80
