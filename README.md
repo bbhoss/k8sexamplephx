@@ -9,7 +9,7 @@ If you want to use this project, you'll need to make some changes, and perform s
 2. Use distillery to build a release `MIX_ENV=prod mix release --env=prod`
 3. Build the docker image, tag it, and upload it somewhere that kubernetes can see (I used Google Container Engine for everything)
 4. Update the kubernetes "all-in-one" file for your new image (examplephx-aio.yaml), and check other settings.
-5. Create a secret and config map see the bottom (Addendum) of [this great post](https://substance.brpx.com/clustering-elixir-nodes-on-kubernetes-e85d0c26b0cf) for details
+5. Create a secret and config map (I've included the proper vm.args for libcluster) see the bottom (Addendum) of [this great post](https://substance.brpx.com/clustering-elixir-nodes-on-kubernetes-e85d0c26b0cf) for details
 6. Use kubernetes to create your cluster (ReplicationController+Service) `kubectl create -f examplephx-aio.yaml`
 
 I probably forgot something, don't be afraid to reach out @bbhoss :)
