@@ -1,6 +1,6 @@
 FROM ubuntu:17.04
-RUN set -eu pipefail \
-  && apt-get update -y \
+RUN \
+  apt-get update -y \
   && apt-get upgrade -y \
   && apt-get install -y git g++ locales curl wget make libssl-dev \
   && locale-gen en_US.UTF-8 \
