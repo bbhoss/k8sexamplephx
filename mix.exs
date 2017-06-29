@@ -9,7 +9,8 @@ defmodule ExamplePhx.Mixfile do
      compilers: [:phoenix, :gettext] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps()]
+     deps: deps(),
+     aliases: aliases()]
   end
 
   # Configuration for the OTP application.
@@ -17,7 +18,7 @@ defmodule ExamplePhx.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {ExamplePhx, []},
-     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext, :libcluster, :distillery]]
+     extra_applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext, :libcluster, :distillery, :runtime_tools, :crypto]]
   end
 
   # Specifies which paths to compile per environment.
