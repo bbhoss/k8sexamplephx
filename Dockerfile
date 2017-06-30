@@ -25,7 +25,8 @@ COPY mix.exs mix.lock ./
 COPY . .
 
 RUN \
-  mix do deps.get, deps.compile \
+  echo "use Mix.Config" > config/prod.secret.exs \
+  && mix do deps.get, deps.compile \
   && mix do phoenix.digest \
   && MIX_ENV=prod mix release --env=prod --verbose \
   && tar xvzf _build/prod/rel/example_phx/releases/0.0.1/example_phx.tar.gz \
