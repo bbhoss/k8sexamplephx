@@ -1,0 +1,11 @@
+.DS_Store
+.dockerignore
+.git
+.gitignore
+.log
+erl_crash.dump
+tmp
+Dockerfile
+_build
+deps
+test
